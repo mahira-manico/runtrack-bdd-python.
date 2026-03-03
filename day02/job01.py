@@ -54,3 +54,11 @@ for x in cursor:
 cursor.execute("SELECT nom,capcite FROM salle")
 for x in cursor:
     print(x)
+
+sum="""SELECT SUM(superficie) FROM etage
+"""
+cursor.execute(sum)
+result=cursor.fetchone()
+total=result[0]
+print(f"La superficie de La Plateforme est de {total} m2")
+
