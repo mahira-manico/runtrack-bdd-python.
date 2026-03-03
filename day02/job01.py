@@ -62,3 +62,8 @@ result=cursor.fetchone()
 total=result[0]
 print(f"La superficie de La Plateforme est de {total} m2")
 
+sum_salle="""SELECT SUM(capcite) FROM salle"""
+cursor.execute(sum_salle)
+result=cursor.fetchone()
+total=result[0]
+print(f"La capacité totale des salles est de : {total}")
