@@ -1,4 +1,4 @@
-import mysql
+import mysql.connector
 
 class Zoo:
     def __init__(self):
@@ -69,3 +69,9 @@ class Zoo:
        self.cursor.execute(request)
        result=self.cursor.fetchone()
        print(f"The total superficie is {result[0]} m2")
+
+mon_zoo=Zoo()
+mon_zoo.add_cage(500, 10) 
+mon_zoo.add_animal("Simba", "Lion", 1, "2023-01-01", "Kenya") 
+mon_zoo.read_cage() 
+mon_zoo.calculate() 
